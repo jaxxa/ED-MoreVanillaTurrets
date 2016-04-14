@@ -59,18 +59,18 @@
     <costList>
       <Steel>150</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>55</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_GunComplex</turretGunDef>
       <turretBurstCooldownTicks>18</turretBurstCooldownTicks>
       <turretTopgraphicPath>Things/Building/Security/GunComplexGun</turretTopgraphicPath>
     </building>
     <staticSunShadowHeight>0.40</staticSunShadowHeight>
     <designationHotKey>G</designationHotKey>
-    <researchPrerequisite>MilitaryTurret</researchPrerequisite>
+	<researchPrerequisites><li>MilitaryTurret</li></researchPrerequisites>
   </ThingDef>
 
   <!--=============== military grade turret ===============-->
@@ -116,17 +116,17 @@
     <costList>
       <Steel>120</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>28</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_TurretMilitary</turretGunDef>
       <turretBurstCooldownTicks>440</turretBurstCooldownTicks>
       <turretTopgraphicPath>Things/Building/Security/MilitaryTurretGun</turretTopgraphicPath>
     </building>
     <designationHotKey>H</designationHotKey>
-    <researchPrerequisite>MilitaryTurret</researchPrerequisite>
+	<researchPrerequisites><li>MilitaryTurret</li></researchPrerequisites>
   </ThingDef>
 
 <!--=============== precision turret ===============-->
@@ -171,17 +171,17 @@
     <costList>
       <Steel>180</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>50</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_TurretPrecision</turretGunDef>
       <turretBurstCooldownTicks>300</turretBurstCooldownTicks>
       <turretTopgraphicPath>Things/Building/Security/PrecisionTurretGun</turretTopgraphicPath>
     </building>
     <designationHotKey>J</designationHotKey>
-    <researchPrerequisite>ShredderTurret</researchPrerequisite>
+	<researchPrerequisites><li>ShredderTurret</li></researchPrerequisites>
   </ThingDef>
 
 <!--=============== shredder turret ===============-->
@@ -226,17 +226,17 @@
     <costList>
       <Steel>180</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>20</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_TurretShredder</turretGunDef>
       <turretBurstCooldownTicks>320</turretBurstCooldownTicks>
       <turretTopgraphicPath>Things/Building/Security/ShredderTurretGun</turretTopgraphicPath>
     </building>
     <designationHotKey>K</designationHotKey>
-    <researchPrerequisite>ShredderTurret</researchPrerequisite>
+	<researchPrerequisites><li>ShredderTurret</li></researchPrerequisites>
   </ThingDef>
 
 <!--=============== vulcan cannon ===============-->
@@ -282,11 +282,11 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     <costList>
       <Steel>400</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>36</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_VulcanCannon</turretGunDef>
       <turretBurstCooldownTicks>6</turretBurstCooldownTicks>
       <turretTopgraphicPath>Things/Building/Security/VulcanCannonGun</turretTopgraphicPath>
@@ -296,7 +296,7 @@ Its high placement allows it for a much longer range, but unfortunately due to t
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
     <designationHotKey>V</designationHotKey>
-    <researchPrerequisite>VulcanCannon</researchPrerequisite>
+	<researchPrerequisites><li>VulcanCannon</li></researchPrerequisites>
   </ThingDef>
 
 <!--=============== rocket complex ===============-->
@@ -344,11 +344,11 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     <costList>
       <Steel>150</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <specialDisplayRadius>55</specialDisplayRadius>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_RocketComplex</turretGunDef>
       <turretShellDef>ArtilleryShell</turretShellDef>
       <turretBurstCooldownTicks>500</turretBurstCooldownTicks>
@@ -356,7 +356,7 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     </building>
     <staticSunShadowHeight>0.40</staticSunShadowHeight>
     <designationHotKey>T</designationHotKey>
-    <researchPrerequisite>Mortars</researchPrerequisite>
+	<researchPrerequisites><li>Mortars</li></researchPrerequisites>
   </ThingDef>
 
 <!--=============== Devastator mortar ===============-->
@@ -379,7 +379,6 @@ Its high placement allows it for a much longer range, but unfortunately due to t
       <Beauty>-60</Beauty>
     </statBases>
     <tickerType>Normal</tickerType>
-    <comps>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>10</explosiveRadius>
@@ -409,10 +408,10 @@ Watch out for a huge explosion when destroyed.</description>
     <costList>
       <Steel>600</Steel>
     </costList>
-    <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
     <building>
+	<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Artillery_DevastatorBomb</turretGunDef>
       <turretShellDef>ArtilleryShell</turretShellDef>
       <turretBurstWarmupTicks>200</turretBurstWarmupTicks>
@@ -426,6 +425,6 @@ Watch out for a huge explosion when destroyed.</description>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <researchPrerequisite>DevastatorMortar</researchPrerequisite>
+	<researchPrerequisites><li>DevastatorMortar</li></researchPrerequisites>
   </ThingDef>
 </ThingDefs>
