@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+<ResearchProjectDef>
+    <defName>MilitaryTurret</defName>
+    <label>military grade turrets</label>
+    <description>Allows you to build a more advanced military grade turrets, along with the all new gun complex for your colony defense.</description>
+    <totalCost>2800</totalCost>
+    <prerequisites>
+      <li>GunTurretCooling</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ShredderTurret</defName>
+    <label>shredder and precision turrets</label>
+    <description>Allows you to build deadly close range guns called shredders, along with more small and fragile long range precision turrets.</description>
+    <totalCost>3600</totalCost>
+    <prerequisites>
+      <li>MilitaryTurret</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>VulcanCannon</defName>
+    <label>vulcan cannon</label>
+    <description>Gives you the ability to build Vulcan cannons.</description>
+    <totalCost>5600</totalCost>
+    <prerequisites>
+      <li>ShredderTurret</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>DevastatorMortar</defName>
+    <label>devastator mortar</label>
+    <description>Allows you to build Devastator mortars.</description>
+    <totalCost>10000</totalCost>
+    <prerequisites>
+      <li>Mortars</li>
+      <li>VulcanCannon</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+
+
+
+</ResearchProjectDefs>
