@@ -6,9 +6,6 @@
     <label>military grade turrets</label>
     <description>Allows you to build a more advanced military grade turrets, along with the all new gun complex for your colony defense.</description>
     <totalCost>2800</totalCost>
-    <prerequisites>
-      <li>GunTurretCooling</li>
-    </prerequisites>
   </ResearchProjectDef>
 
 <ResearchProjectDef>

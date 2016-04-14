@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
+
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
+    <thingClass>Building</thingClass>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <selectable>true</selectable>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -10,45 +12,6 @@
     <repairEffect>Repair</repairEffect>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
-
-<!--=============== Moat ===============-->
-<ThingDef ParentName="BuildingBase">
-    <defName>Moat</defName>
-    <thingClass>Building</thingClass>
-    <label>shallow moat</label>
-    <category>Building</category>
-    <blueprintGraphicData>
-      <texPath>Things/Building/Security/MoatAtlasBlueprint</texPath>
-    </blueprintGraphicData>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/Security/MoatAtlas</texPath>
-      <shaderType>Transparent</shaderType>
-      <linkType>Basic</linkType>
-      <linkFlags>
-        <li>MapEdge</li>
-      </linkFlags>
-    </graphicData>
-    <altitudeLayer>LowPlant</altitudeLayer>
-    <uiIconPath>Things/Building/Security/MenuMoatIcon</uiIconPath>
-    <pathCost>90</pathCost>
-    <statBases>
-      <Beauty>-20</Beauty>
-      <WorkToMake>700</WorkToMake>
-      <Flammability>0</Flammability>
-    </statBases>
-    <description>A light perimeter defense to slow down your enemy.</description>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
-   
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <constructEffect>ConstructDirt</constructEffect>
-    <designationHotKey>F</designationHotKey>
-    <repairEffect>ConstructDirt</repairEffect>
   </ThingDef>
 
 <!--=============== gun complex ===============-->
@@ -73,16 +36,13 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>1</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
-        <compClass>CompMannable</compClass>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
       </li>
      </comps>
     <description>A perimeter mounted gun is designed to work regardless if you have power or not as long as somebody is manning it.</description>
@@ -132,15 +92,12 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>4.5</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>390</basePowerConsumption>
       </li>
@@ -191,15 +148,12 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>2.5</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>420</basePowerConsumption>
       </li>
@@ -249,15 +203,12 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>1</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>420</basePowerConsumption>
       </li>
@@ -308,15 +259,12 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>5.1</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1000</basePowerConsumption>
       </li>
@@ -373,16 +321,13 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
-        <explosiveRadius>1</explosiveRadius>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-      <li>
-        <compClass>CompMannable</compClass>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
       </li>
     </comps>
     <description>An older class of weapon that requires manual control and reload, fortunately with the help of decent optics and deadly blast radius it is still very much feared on the front lines.</description>
@@ -435,18 +380,17 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li>
-        <compClass>CompExplosive</compClass>
+    <comps>
+      <li Class="CompProperties_Explosive">
         <explosiveRadius>10</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li>
-        <compClass>CompForbiddable</compClass>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
       </li>
-      <li>
-        <compClass>CompMannable</compClass>
-      </li>
-      <li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1400</basePowerConsumption>
       </li>
