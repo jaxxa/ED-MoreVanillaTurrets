@@ -57,7 +57,8 @@
     </stuffCategories>
     <costStuffCount>100</costStuffCount>
     <costList>
-      <Steel>150</Steel>
+      <Steel>100</Steel>
+      <Components>1</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -115,6 +116,7 @@
     <costStuffCount>120</costStuffCount>
     <costList>
       <Steel>120</Steel>
+      <Components>3</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -169,7 +171,8 @@
     </stuffCategories>
     <costStuffCount>180</costStuffCount>
     <costList>
-      <Steel>180</Steel>
+      <Steel>120</Steel>
+      <Components>5</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -224,7 +227,8 @@
     </stuffCategories>
     <costStuffCount>180</costStuffCount>
     <costList>
-      <Steel>180</Steel>
+      <Steel>120</Steel>
+      <Components>3</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -280,7 +284,8 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     </stuffCategories>
     <costStuffCount>600</costStuffCount>
     <costList>
-      <Steel>400</Steel>
+      <Steel>300</Steel>
+      <Components>7</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -322,7 +327,7 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     <tickerType>Normal</tickerType>
     <comps>
       <li Class="CompProperties_Explosive">
-        <explosiveRadius>2</explosiveRadius>
+        <explosiveRadius>1</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
       <li Class="CompProperties_Forbiddable"/>
@@ -342,7 +347,8 @@ Its high placement allows it for a much longer range, but unfortunately due to t
     </stuffCategories>
     <costStuffCount>100</costStuffCount>
     <costList>
-      <Steel>150</Steel>
+      <Steel>100</Steel>
+      <Components>1</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -406,7 +412,8 @@ Watch out for a huge explosion when destroyed.</description>
     </stuffCategories>
     <costStuffCount>400</costStuffCount>
     <costList>
-      <Steel>600</Steel>
+      <Steel>200</Steel>
+      <Components>10</Components>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
