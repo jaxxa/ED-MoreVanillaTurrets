@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>More Vanilla Turrets</name>
-  <author>Jaxxa, Origional by: Marnador</author>          
-  <description> Based on the Origional "More Vanilla Turrets" by Marnador.
-  A little mod that adds more turret variations with the attempt to keep their vanilla art style.</description>
+	<name>More Vanilla Turrets</name>
+	<author>Jaxxa, Origional by: Marnador</author>          
+	<description> Based on the Origional "More Vanilla Turrets" by Marnador.
+  Origional: https://ludeon.com/forums/index.php?topic=9521.0
+
+  A mod that adds more turret variations with the attempt to keep their vanilla art style.
+	</description>
 </ModMetaData>
