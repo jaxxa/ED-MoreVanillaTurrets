@@ -44,6 +44,7 @@
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
+	  <li Class="CompProperties_Flickable"/>
      </comps>
     <description>A perimeter mounted gun is designed to work regardless if you have power or not as long as somebody is manning it.</description>
     <size>(3,1)</size>
@@ -102,6 +103,7 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>390</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>A more poweful variant of an automated turret, longer dual barrels provide increased range and for greater burst, explodes when destroyed.</description>
     <size>(1,1)</size>
@@ -159,6 +161,7 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>420</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>A highly calibrated gun turret, with advanced optics allows to deliver a single but precise shot at fairly long distances.</description>
     <size>(1,1)</size>
@@ -215,6 +218,7 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>420</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>Shredder turret is designed for close range, explosion when destroyed is minimal thus making it a perfect choice for indoor defense, the only downside is that it takes more space than an ordinary variant.</description>
     <size>(2,2)</size>
@@ -272,6 +276,7 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1000</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>Fortified minigun tower that fires continuously, very durable but power hungry.
 Its high placement allows it for a much longer range, but unfortunately due to that it can't aim directly down or close to itself and can't be placed indoors. Watch out for a sizable explosion when destroyed.</description>
@@ -334,6 +339,7 @@ Its high placement allows it for a much longer range, but unfortunately due to t
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>An older class of weapon that requires manual control and reload, fortunately with the help of decent optics and deadly blast radius it is still very much feared on the front lines.</description>
     <size>(3,1)</size>
@@ -399,6 +405,7 @@ Its high placement allows it for a much longer range, but unfortunately due to t
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1400</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
     </comps>
     <description>A magnetic catapult that launches projectiles with greater velocity and higher accuracy and ultimately much larger blast radius thanks to its 5 burst mode.
 Watch out for a huge explosion when destroyed.</description>
