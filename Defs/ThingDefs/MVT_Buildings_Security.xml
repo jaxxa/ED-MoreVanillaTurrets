@@ -2,443 +2,457 @@
 <ThingDefs>
 
 
-  <ThingDef Name="BuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
 
-<!--=============== gun complex ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>GunComplex</defName>
-    <label>gun complex</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/GunComplex</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3,1)</drawSize>
-    </graphicData>
-    <uiIconPath>Things/Building/Security/GunComplex_menuicon</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <statBases>
-      <MaxHitPoints>225</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>3000</WorkToMake>
-      <Beauty>-40</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>1</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Mannable">
-        <manWorkType>Violent</manWorkType>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-     </comps>
-    <description>A perimeter mounted gun is designed to work regardless if you have power or not as long as somebody is manning it.</description>
-    <size>(3,1)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.85</fillPercent>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>100</costStuffCount>
-    <costList>
-      <Steel>100</Steel>
-      <Components>1</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>55</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_GunComplex</turretGunDef>
-      <turretBurstCooldownTicks>18</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/GunComplexGun</turretTopgraphicPath>
-    </building>
-    <staticSunShadowHeight>0.40</staticSunShadowHeight>
-    <designationHotKey>G</designationHotKey>
-	<researchPrerequisites><li>MilitaryTurret</li></researchPrerequisites>
-  </ThingDef>
+	<!--=============== gun complex ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>GunComplex</defName>
+		<label>gun complex</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/GunComplex</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/GunComplex_menuicon</uiIconPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>225</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3000</WorkToMake>
+			<Beauty>-40</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>A perimeter mounted gun is designed to work regardless if you have power or not as long as somebody is manning it.</description>
+		<size>(3,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.85</fillPercent>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<Steel>100</Steel>
+			<Components>1</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>55</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_GunComplex</turretGunDef>
+			<turretBurstCooldownTicks>18</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/GunComplexGun</turretTopgraphicPath>
+		</building>
+		<staticSunShadowHeight>0.40</staticSunShadowHeight>
+		<designationHotKey>G</designationHotKey>
+		<researchPrerequisites>
+			<li>MilitaryTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-  <!--=============== military grade turret ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>MilitaryTurretGun</defName>
-    <label>military grade turret</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/MilitaryTurretBase</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>3000</WorkToMake>
-      <Beauty>-60</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>4.5</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>390</basePowerConsumption>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>A more poweful variant of an automated turret, longer dual barrels provide increased range and for greater burst, explodes when destroyed.</description>
-    <size>(1,1)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
-    <hasTooltip>true</hasTooltip>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>120</costStuffCount>
-    <costList>
-      <Steel>120</Steel>
-      <Components>3</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>28</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_TurretMilitary</turretGunDef>
-      <turretBurstCooldownTicks>440</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/MilitaryTurretGun</turretTopgraphicPath>
-    </building>
-    <designationHotKey>H</designationHotKey>
-	<researchPrerequisites><li>MilitaryTurret</li></researchPrerequisites>
-  </ThingDef>
+	<!--=============== military grade turret ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>MilitaryTurretGun</defName>
+		<label>military grade turret</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/MilitaryTurretBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3000</WorkToMake>
+			<Beauty>-60</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4.5</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>390</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>A more poweful variant of an automated turret, longer dual barrels provide increased range and for greater burst, explodes when destroyed.</description>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>120</costStuffCount>
+		<costList>
+			<Steel>120</Steel>
+			<Components>3</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>28</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_TurretMilitary</turretGunDef>
+			<turretBurstCooldownTicks>440</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/MilitaryTurretGun</turretTopgraphicPath>
+		</building>
+		<designationHotKey>H</designationHotKey>
+		<researchPrerequisites>
+			<li>MilitaryTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-<!--=============== precision turret ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>PrecisionTurretGun</defName>
-    <label>precision turret</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/PrecisionTurretBase</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <statBases>
-      <MaxHitPoints>120</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>3000</WorkToMake>
-      <Beauty>-60</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>2.5</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>420</basePowerConsumption>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>A highly calibrated gun turret, with advanced optics allows to deliver a single but precise shot at fairly long distances.</description>
-    <size>(1,1)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>180</costStuffCount>
-    <costList>
-      <Steel>120</Steel>
-      <Components>5</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>50</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_TurretPrecision</turretGunDef>
-      <turretBurstCooldownTicks>300</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/PrecisionTurretGun</turretTopgraphicPath>
-    </building>
-    <designationHotKey>J</designationHotKey>
-	<researchPrerequisites><li>ShredderTurret</li></researchPrerequisites>
-  </ThingDef>
+	<!--=============== precision turret ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>PrecisionTurretGun</defName>
+		<label>precision turret</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/PrecisionTurretBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3000</WorkToMake>
+			<Beauty>-60</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.5</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>420</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>A highly calibrated gun turret, with advanced optics allows to deliver a single but precise shot at fairly long distances.</description>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>180</costStuffCount>
+		<costList>
+			<Steel>120</Steel>
+			<Components>5</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>50</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_TurretPrecision</turretGunDef>
+			<turretBurstCooldownTicks>300</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/PrecisionTurretGun</turretTopgraphicPath>
+		</building>
+		<designationHotKey>J</designationHotKey>
+		<researchPrerequisites>
+			<li>ShredderTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-<!--=============== shredder turret ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>ShredderTurretGun</defName>
-    <label>shredder turret</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/ShredderTurretBase</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(4,4)</drawSize>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <statBases>
-      <MaxHitPoints>240</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>3500</WorkToMake>
-      <Beauty>-70</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>1</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>420</basePowerConsumption>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>Shredder turret is designed for close range, explosion when destroyed is minimal thus making it a perfect choice for indoor defense, the only downside is that it takes more space than an ordinary variant.</description>
-    <size>(2,2)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>180</costStuffCount>
-    <costList>
-      <Steel>120</Steel>
-      <Components>3</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>20</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_TurretShredder</turretGunDef>
-      <turretBurstCooldownTicks>320</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/ShredderTurretGun</turretTopgraphicPath>
-    </building>
-    <designationHotKey>K</designationHotKey>
-	<researchPrerequisites><li>ShredderTurret</li></researchPrerequisites>
-  </ThingDef>
+	<!--=============== shredder turret ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>ShredderTurretGun</defName>
+		<label>shredder turret</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/ShredderTurretBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>240</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3500</WorkToMake>
+			<Beauty>-70</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>420</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>Shredder turret is designed for close range, explosion when destroyed is minimal thus making it a perfect choice for indoor defense, the only downside is that it takes more space than an ordinary variant.</description>
+		<size>(2,2)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>180</costStuffCount>
+		<costList>
+			<Steel>120</Steel>
+			<Components>3</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>20</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_TurretShredder</turretGunDef>
+			<turretBurstCooldownTicks>320</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/ShredderTurretGun</turretTopgraphicPath>
+		</building>
+		<designationHotKey>K</designationHotKey>
+		<researchPrerequisites>
+			<li>ShredderTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-<!--=============== vulcan cannon ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>VulcanCannon</defName>
-    <label>vulcan cannon</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/VulcanCannon</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(5,5)</drawSize>
-    </graphicData>
-    <uiIconPath>Things/Building/Security/VulcanCannon_menuicon</uiIconPath>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>8000</WorkToMake>
-      <Beauty>-90</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>5.1</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1000</basePowerConsumption>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>Fortified minigun tower that fires continuously, very durable but power hungry.
+	<!--=============== vulcan cannon ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>VulcanCannon</defName>
+		<label>vulcan cannon</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/VulcanCannon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/VulcanCannon_menuicon</uiIconPath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>8000</WorkToMake>
+			<Beauty>-90</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>5.1</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>Fortified minigun tower that fires continuously, very durable but power hungry.
 Its high placement allows it for a much longer range, but unfortunately due to that it can't aim directly down or close to itself and can't be placed indoors. Watch out for a sizable explosion when destroyed.</description>
-    <size>(3,3)</size>
-    <passability>Impassable</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.9</fillPercent>
-    <stuffCategories>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>600</costStuffCount>
-    <costList>
-      <Steel>300</Steel>
-      <Components>7</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>36</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_VulcanCannon</turretGunDef>
-      <turretBurstCooldownTicks>6</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/VulcanCannonGun</turretTopgraphicPath>
-    </building>
-    <rotatable>true</rotatable>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-    </placeWorkers>
-    <designationHotKey>V</designationHotKey>
-	<researchPrerequisites><li>VulcanCannon</li></researchPrerequisites>
-  </ThingDef>
+		<size>(3,3)</size>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.9</fillPercent>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>600</costStuffCount>
+		<costList>
+			<Steel>300</Steel>
+			<Components>7</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>36</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_VulcanCannon</turretGunDef>
+			<turretBurstCooldownTicks>6</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/VulcanCannonGun</turretTopgraphicPath>
+		</building>
+		<rotatable>true</rotatable>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<designationHotKey>V</designationHotKey>
+		<researchPrerequisites>
+			<li>VulcanCannon</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-<!--=============== rocket complex ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>RocketComplex</defName>
-    <label>rocket complex</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/RocketComplex</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3,1)</drawSize>
-    </graphicData>
-    <uiIconPath>Things/Building/Security/RocketComplex_menuicon</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <statBases>
-      <MaxHitPoints>225</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>3000</WorkToMake>
-      <Beauty>-40</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>1</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Mannable">
-        <manWorkType>Violent</manWorkType>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>An older class of weapon that requires manual control and reload, fortunately with the help of decent optics and deadly blast radius it is still very much feared on the front lines.</description>
-    <size>(3,1)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.85</fillPercent>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>100</costStuffCount>
-    <costList>
-      <Steel>100</Steel>
-      <Components>1</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>55</specialDisplayRadius>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_RocketComplex</turretGunDef>
-      <turretShellDef>ArtilleryShell</turretShellDef>
-      <turretBurstCooldownTicks>500</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/RocketComplexGun</turretTopgraphicPath>
-    </building>
-    <staticSunShadowHeight>0.40</staticSunShadowHeight>
-    <designationHotKey>T</designationHotKey>
-	<researchPrerequisites><li>Mortars</li></researchPrerequisites>
-  </ThingDef>
+	<!--=============== rocket complex ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RocketComplex</defName>
+		<label>rocket complex</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/RocketComplex</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/RocketComplex_menuicon</uiIconPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>225</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3000</WorkToMake>
+			<Beauty>-40</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>An older class of weapon that requires manual control and reload, fortunately with the help of decent optics and deadly blast radius it is still very much feared on the front lines.</description>
+		<size>(3,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.85</fillPercent>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<Steel>100</Steel>
+			<Components>1</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>55</specialDisplayRadius>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Gun_RocketComplex</turretGunDef>
+			<turretShellDef>ArtilleryShell</turretShellDef>
+			<turretBurstCooldownTicks>500</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/RocketComplexGun</turretTopgraphicPath>
+		</building>
+		<staticSunShadowHeight>0.40</staticSunShadowHeight>
+		<designationHotKey>T</designationHotKey>
+		<researchPrerequisites>
+			<li>Mortars</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-<!--=============== Devastator mortar ===============-->
-  <ThingDef ParentName="BuildingBase">
-    <defName>Turret_DevastatorMortarBomb</defName>
-    <label>devastator mortar</label>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Security/DevastatorMortarBase</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(4,4)</drawSize>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <statBases>
-      <MaxHitPoints>360</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <WorkToMake>8000</WorkToMake>
-      <Beauty>-60</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>10</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Mannable">
-        <manWorkType>Violent</manWorkType>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1400</basePowerConsumption>
-      </li>
-	  <li Class="CompProperties_Flickable"/>
-    </comps>
-    <description>A magnetic catapult that launches projectiles with greater velocity and higher accuracy and ultimately much larger blast radius thanks to its 5 burst mode.
+	<!--=============== Devastator mortar ===============-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Turret_DevastatorMortarBomb</defName>
+		<label>devastator mortar</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/DevastatorMortarBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>360</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>8000</WorkToMake>
+			<Beauty>-60</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1400</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<description>A magnetic catapult that launches projectiles with greater velocity and higher accuracy and ultimately much larger blast radius thanks to its 5 burst mode.
 Watch out for a huge explosion when destroyed.</description>
-    <size>(2,2)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>400</costStuffCount>
-    <costList>
-      <Steel>200</Steel>
-      <Components>10</Components>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <building>
-	<ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Artillery_DevastatorBomb</turretGunDef>
-      <turretShellDef>ArtilleryShell</turretShellDef>
-      <turretBurstWarmupTicks>200</turretBurstWarmupTicks>
-      <turretBurstCooldownTicks>5000</turretBurstCooldownTicks>
-      <turretTopgraphicPath>Things/Building/Security/DevastatorGun</turretTopgraphicPath>
-      <buildingTags>
-        <li>Artillery</li>
-      </buildingTags>
-    </building>
-    <designationHotKey>Y</designationHotKey>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-    </placeWorkers>
-	<researchPrerequisites><li>DevastatorMortar</li></researchPrerequisites>
-  </ThingDef>
+		<size>(2,2)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>400</costStuffCount>
+		<costList>
+			<Steel>200</Steel>
+			<Components>10</Components>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Artillery_DevastatorBomb</turretGunDef>
+			<turretShellDef>ArtilleryShell</turretShellDef>
+			<turretBurstWarmupTicks>200</turretBurstWarmupTicks>
+			<turretBurstCooldownTicks>5000</turretBurstCooldownTicks>
+			<turretTopgraphicPath>Things/Building/Security/DevastatorGun</turretTopgraphicPath>
+			<buildingTags>
+				<li>Artillery</li>
+			</buildingTags>
+		</building>
+		<designationHotKey>Y</designationHotKey>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>DevastatorMortar</li>
+		</researchPrerequisites>
+	</ThingDef>
 </ThingDefs>
