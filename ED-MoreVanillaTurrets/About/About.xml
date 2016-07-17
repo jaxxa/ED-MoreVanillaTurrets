@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>ED-More Vanilla Turrets</name>
-	<author>Jaxxa, Original by: Marnador</author>          
+	<targetVersion>0.14.1234</targetVersion>
+	<author>Jaxxa, Original by: Marnador</author>
+	<url>https://ludeon.com/forums/index.php?topic=18995.0</url>        
 	<description> Based on the Original "More Vanilla Turrets" by Marnador.
   Original: https://ludeon.com/forums/index.php?topic=9521.0
 

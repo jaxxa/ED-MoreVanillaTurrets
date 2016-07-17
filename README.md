@@ -9,3 +9,6 @@ Currently this is almost exactly the same as the A12 version by Marnador.
 
 01.00.01
 *Added ability to Flick on / Off Turrets
+
+02.00.00
+*Alpha 14 Update
