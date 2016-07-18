@@ -12,3 +12,7 @@ Currently this is almost exactly the same as the A12 version by Marnador.
 
 02.00.00
 *Alpha 14 Update
+
+02.00.00
+*All turrets are movable to reflect change to vanilla turrets in alpha 14
+*Research now depends on vanilla GunTurrets research
