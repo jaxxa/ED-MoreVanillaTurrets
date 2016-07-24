@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>ED-More Vanilla Turrets</name>
-	<targetVersion>0.14.1234</targetVersion>
+	<targetVersion>0.14.1241</targetVersion>
 	<author>Jaxxa, Original by: Marnador</author>
 	<url>https://ludeon.com/forums/index.php?topic=18995</url>        
 	<description>Version: 02.00.01 
 
 This is a mod that adds more turret variations with the attempt to keep their vanilla art style.
 
-This is based on "More Vanilla Turrets" by Marnador https://ludeon.com/forums/index.php?topic=9521
+This is based on "More Vanilla Turrets" by Marnador that has now been updated to Alpha 14.
+You are probably better off grabbing it Here: https://ludeon.com/forums/index.php?topic=9521 or Here:http://steamcommunity.com/sharedfiles/filedetails/?id=730528968
 
 Thanks to retep998 for committing improvements on Github.
 	</description>
