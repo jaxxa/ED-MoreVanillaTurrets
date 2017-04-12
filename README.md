@@ -1,4 +1,7 @@
 # ED-MoreVanillaTurrets
+
+As Marnador is now updating the original version again please get that version from the link provided.
+
 This is a mod that adds more turret variations with the attempt to keep their vanilla art style.
 This is based on "More Vanilla Turrets" by Marnador https://ludeon.com/forums/index.php?topic=9521
 
