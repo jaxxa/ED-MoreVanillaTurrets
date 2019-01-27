@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Particle Cell ====================-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ParticleCell</defName>
+    <label>devastator power cell</label>
+    <description>A power cell designed for devastator mortars. Explodes with EMP discharge when damaged.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/DevCellC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <tickerType>Normal</tickerType>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>77</MarketValue>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>6</explosiveRadius>
+        <explosiveDamageType>EMP</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

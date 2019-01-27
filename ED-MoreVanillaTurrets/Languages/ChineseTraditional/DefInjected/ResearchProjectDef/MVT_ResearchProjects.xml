@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <GunComplex.label>MVT：複合機槍巢</GunComplex.label>
+  <GunComplex.description>解鎖建造新式的、無AI操控的「複合機槍巢」以保護殖民地。</GunComplex.description>
+
+  <RocketComplex.label>MVT：複合火箭巢</RocketComplex.label>
+  <RocketComplex.description>解鎖建造無AI操控的「複合火箭巢」以保護殖民地。</RocketComplex.description>
+
+  <MilitaryTurret.label>MVT：軍用炮塔</MilitaryTurret.label>
+  <MilitaryTurret.description>解鎖建造更先進的「軍用炮塔」。</MilitaryTurret.description>
+
+  <ShredderTurret.label>MVT：粉碎者炮塔</ShredderTurret.label>
+  <ShredderTurret.description>解鎖建造致命近距離攻擊的「粉碎者炮塔」。</ShredderTurret.description>
+
+  <PrecisionTurret.label>MVT：精準炮塔</PrecisionTurret.label>
+  <PrecisionTurret.description>解鎖建造遠射程的「精準炮塔」。</PrecisionTurret.description>
+
+  <BlastTurret.label>MVT：爆裂炮塔</BlastTurret.label>
+  <BlastTurret.description>解鎖建造相當嚇人的「爆裂炮塔」。</BlastTurret.description>
+
+  <VulcanCannon.label>MVT：火神炮</VulcanCannon.label>
+  <VulcanCannon.description>解鎖建造「火神炮」。</VulcanCannon.description>
+
+  <DevastatorMortar.label>MVT：毀滅者迫擊炮</DevastatorMortar.label>
+  <DevastatorMortar.description>解鎖建造「毀滅者迫擊炮」。</DevastatorMortar.description>
+
+
+</LanguageData>

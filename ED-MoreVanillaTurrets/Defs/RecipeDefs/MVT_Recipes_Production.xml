@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef>
+    <defName>MakeParticleCell</defName>
+    <label>make devastator particle cell</label>
+    <description>Craft a devastator particle cell.</description>
+    <jobString>Making devastator particle cell.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>2400</workAmount>
+    <unfinishedThingDef>UnfinishedCell</unfinishedThingDef>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Component</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ParticleCell>1</ParticleCell>
+    </products>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>10</minLevel>
+			</li>
+		</skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+</RecipeDefs>

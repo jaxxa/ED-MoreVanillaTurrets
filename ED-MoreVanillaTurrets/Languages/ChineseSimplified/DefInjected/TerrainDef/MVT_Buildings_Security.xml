@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Moat -->
+
+  <Shallowmoat.label>浅水护城河</Shallowmoat.label>
+  <Shallowmoat.description>用于减速敌人的简易外围防御。可以在「可挖掘」的地形上建造，并且可以用「移除地板」命令移除。</Shallowmoat.description>
+
+
+</LanguageData>
